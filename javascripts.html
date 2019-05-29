@@ -1,0 +1,52 @@
+<!--java-script
+
+1- Créer une page web html
+
+2- Dans une balise <script>, déclarer une variable de type tableau, ajoutez-y (push) trois éléments, puis afficher grâce à une boucle les différents éléments de ce tableau dans une alert.
+
+3- Créer un bouton "ajouter un div" dans la page web. En java-script, écouter (addEventListener) le clic sur ce bouton. Lors du clic, un élément <div> doit être ajouté dans la page web. -->
+
+<!DOCTYPE html>
+<html lang="fr">
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script>
+			 var tableau = [];
+
+			 tableau.push( "Une fois ! " );
+			 tableau.push( "Deux fois ! " );
+			 tableau.push( "Trois fois ! " );
+
+			 for (i=0; i<=2;i++) {
+				alert(tableau[i]);
+				console.log (tableau[i]);
+			}
+
+		</script>
+
+		<div class="principal">
+		</div>
+
+		<button id="ajoutDansDiv"> Ajouter une div </button>
+
+		<script>
+			var divPrincipal = document.querySelector('.principal');
+            var btnAdd = document.querySelector('#ajoutDansDiv');
+    
+            btnAdd.addEventListener("click", function()
+                
+                {var divEnfant = document.createElement("div");
+            	divPrincipal.appendChild(divEnfant)});
+
+		</script>
+			
+
+
+	</body>
+
+</html>
